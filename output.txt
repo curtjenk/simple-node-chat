@@ -1,0 +1,90 @@
+COMMAND    PID           USER   FD   TYPE             DEVICE SIZE/OFF   NODE NAME
+launchd      1           root   18u  IPv4 0xe3cb4a4b9973283f      0t0    UDP *:netbios-dgm
+launchd      1           root   28u  IPv4 0xe3cb4a4b997325d7      0t0    UDP *:netbios-ns
+UserEvent   45           root    4u  IPv4 0xe3cb4a4b9a9e104f      0t0    UDP *:*
+UserEvent   45           root    9u  IPv4 0xe3cb4a4b9bcd75d7      0t0    UDP *:*
+configd     54           root    8u  IPv6 0xe3cb4a4b9a97af77      0t0 ICMPV6 *:*
+configd     54           root    9u  IPv4 0xe3cb4a4b99731e9f      0t0    UDP *:*
+configd     54           root   11u  IPv4 0xe3cb4a4b9a96e36f      0t0    UDP *:*
+airportd    60           root   10u  IPv6 0xe3cb4a4b99734ebf      0t0    UDP *:*
+airportd    60           root   11u  IPv4 0xe3cb4a4b9a9702b7      0t0    UDP *:*
+airportd    60           root   20u  IPv4 0xe3cb4a4b997301bf      0t0    UDP *:*
+airportd    60           root   23u  IPv4 0xe3cb4a4b9a9a61bf      0t0    UDP *:*
+airportd    60           root   24u  IPv4 0xe3cb4a4b9a9a883f      0t0    UDP *:*
+airportd    60           root   25u  IPv4 0xe3cb4a4b9a9a91df      0t0    UDP *:*
+airportd    60           root   28u  IPv4 0xe3cb4a4b9a9a96af      0t0    UDP *:*
+airportd    60           root   30u  IPv4 0xe3cb4a4b9a9aa2b7      0t0    UDP *:*
+airportd    60           root   32u  IPv4 0xe3cb4a4b9a9a668f      0t0    UDP *:*
+apsd        77           root    4u  IPv4 0xe3cb4a4b9b980507      0t0    TCP 10.150.51.180:49154->17.110.225.205:5223 (ESTABLISHED)
+apsd        77           root    9u  IPv4 0xe3cb4a4b9b980507      0t0    TCP 10.150.51.180:49154->17.110.225.205:5223 (ESTABLISHED)
+apsd        77           root   19u  IPv4 0xe3cb4a4ba22709ef      0t0    TCP 10.150.51.180:53381->17.110.227.101:5223 (ESTABLISHED)
+apsd        77           root   20u  IPv4 0xe3cb4a4ba22709ef      0t0    TCP 10.150.51.180:53381->17.110.227.101:5223 (ESTABLISHED)
+locationd   82     _locationd    4u  IPv4 0xe3cb4a4b9a9a68f7      0t0    UDP *:*
+blued       85           root    4u  IPv4 0xe3cb4a4b9b979de7      0t0    UDP *:*
+mDNSRespo   90 _mdnsresponder    8u  IPv4 0xe3cb4a4b99732aa7      0t0    UDP *:mdns
+mDNSRespo   90 _mdnsresponder    9u  IPv6 0xe3cb4a4b99732f77      0t0    UDP *:mdns
+mDNSRespo   90 _mdnsresponder   21u  IPv4 0xe3cb4a4b9a9a702f      0t0    UDP *:54087
+mDNSRespo   90 _mdnsresponder   22u  IPv6 0xe3cb4a4b9a9aaebf      0t0    UDP *:54087
+mDNSRespo   90 _mdnsresponder   37u  IPv4 0xe3cb4a4b9973404f      0t0    UDP *:51785
+mDNSRespo   90 _mdnsresponder   38u  IPv6 0xe3cb4a4b99731767      0t0    UDP *:51785
+mDNSRespo   90 _mdnsresponder   39u  IPv4 0xe3cb4a4b9973451f      0t0    UDP *:59372
+mDNSRespo   90 _mdnsresponder   40u  IPv6 0xe3cb4a4b997314ff      0t0    UDP *:59372
+AirPlayXP   98           root    4u  IPv4 0xe3cb4a4b9973068f      0t0    UDP *:*
+AirPlayXP   98           root    8u  IPv4 0xe3cb4a4b9a9a79cf      0t0    UDP *:*
+AirPlayXP   98           root   13u  IPv4 0xe3cb4a4bbbbdfe0f      0t0    TCP 10.150.51.180:51056->10.150.40.64:afs3-fileserver (SYN_SENT)
+networkd   166      _networkd   13u  IPv4 0xe3cb4a4b99734787      0t0    UDP *:*
+ntpd       194           root   20u  IPv4 0xe3cb4a4b9a96ef77      0t0    UDP *:ntp
+ntpd       194           root   21u  IPv6 0xe3cb4a4b9a96f1df      0t0    UDP *:ntp
+ntpd       194           root   22u  IPv6 0xe3cb4a4b9a96cb5f      0t0    UDP localhost:ntp
+ntpd       194           root   23u  IPv4 0xe3cb4a4b9a96c8f7      0t0    UDP localhost:ntp
+ntpd       194           root   24u  IPv6 0xe3cb4a4b9a96f447      0t0    UDP [fe80:1::1]:ntp
+ntpd       194           root   25u  IPv6 0xe3cb4a4b9a96c427      0t0    UDP curtiss-macbook-pro.local:ntp
+ntpd       194           root   26u  IPv4 0xe3cb4a4b9a96f6af      0t0    UDP 10.150.51.180:ntp
+ntpd       194           root   27u  IPv6 0xe3cb4a4b9a96fb7f      0t0    UDP curtiss-macbook-pro.local:ntp
+symptomsd  225      _networkd   17u  IPv4 0xe3cb4a4b9a96c68f      0t0    UDP *:*
+netbiosd   231       _netbios    3u  IPv4 0xe3cb4a4b997325d7      0t0    UDP *:netbios-ns
+netbiosd   231       _netbios    4u  IPv4 0xe3cb4a4b9973283f      0t0    UDP *:netbios-dgm
+UserEvent  264  curtisjenkins    4u  IPv4 0xe3cb4a4b9a9a7767      0t0    UDP *:*
+Slack      269  curtisjenkins   21u  IPv4 0xe3cb4a4ba2efe2f7      0t0    TCP 10.150.51.180:53374->ec2-52-87-154-114.compute-1.amazonaws.com:https (ESTABLISHED)
+Slack      269  curtisjenkins   22u  IPv4 0xe3cb4a4ba2efe2f7      0t0    TCP 10.150.51.180:53374->ec2-52-87-154-114.compute-1.amazonaws.com:https (ESTABLISHED)
+WirelessR  274           root    4u  IPv4 0xe3cb4a4b99731c37      0t0    UDP *:*
+WirelessR  274           root    5u  IPv4 0xe3cb4a4b997342b7      0t0    UDP *:*
+Google     278  curtisjenkins   12u  IPv4 0xe3cb4a4bbbbcd0e7      0t0    TCP 10.150.51.180:51024->a184-30-42-251.deploy.static.akamaitechnologies.com:https (ESTABLISHED)
+Google     278  curtisjenkins   13u  IPv4 0xe3cb4a4ba30ce0e7      0t0    TCP 10.150.51.180:53419->yw-in-f188.1e100.net:5228 (ESTABLISHED)
+Google     278  curtisjenkins   70u  IPv6 0xe3cb4a4bba44047f      0t0    TCP localhost:51550->localhost:xprint-server (CLOSE_WAIT)
+Google     278  curtisjenkins  205u  IPv4 0xe3cb4a4ba0a27bff      0t0    TCP 10.150.51.180:55366->ya-in-f189.1e100.net:https (ESTABLISHED)
+Google     278  curtisjenkins  219u  IPv4 0xe3cb4a4bbbc6e507      0t0    TCP 10.150.51.180:55387->atl14s39-in-f14.1e100.net:https (ESTABLISHED)
+Mail       283  curtisjenkins   27u  IPv4 0xe3cb4a4ba2c250e7      0t0    TCP 10.150.51.180:53416->imap-po.sys.comcast.net:imap (ESTABLISHED)
+Mail       283  curtisjenkins   33u  IPv4 0xe3cb4a4ba2c250e7      0t0    TCP 10.150.51.180:53416->imap-po.sys.comcast.net:imap (ESTABLISHED)
+Mail       283  curtisjenkins   51u  IPv4 0xe3cb4a4bbbc7d2f7      0t0    TCP 10.150.51.180:60992->65.55.174.170:imaps (CLOSED)
+Mail       283  curtisjenkins   52u  IPv4 0xe3cb4a4ba250c0e7      0t0    TCP 10.150.51.180:53418->imap-po.sys.comcast.net:imap (ESTABLISHED)
+Mail       283  curtisjenkins   53u  IPv4 0xe3cb4a4ba250c0e7      0t0    TCP 10.150.51.180:53418->imap-po.sys.comcast.net:imap (ESTABLISHED)
+Mail       283  curtisjenkins   61u  IPv4 0xe3cb4a4ba2efc7df      0t0    TCP 10.150.51.180:53423->imap-po.sys.comcast.net:imap (ESTABLISHED)
+Mail       283  curtisjenkins   71u  IPv4 0xe3cb4a4bbbc7d2f7      0t0    TCP 10.150.51.180:60992->65.55.174.170:imaps (CLOSED)
+Mail       283  curtisjenkins   73u  IPv4 0xe3cb4a4ba2efc7df      0t0    TCP 10.150.51.180:53423->imap-po.sys.comcast.net:imap (ESTABLISHED)
+Mail       283  curtisjenkins   79u  IPv4 0xe3cb4a4ba242e507      0t0    TCP 10.150.51.180:53424->imap-po.sys.comcast.net:imap (ESTABLISHED)
+Mail       283  curtisjenkins   80u  IPv4 0xe3cb4a4ba242e507      0t0    TCP 10.150.51.180:53424->imap-po.sys.comcast.net:imap (ESTABLISHED)
+Mail       283  curtisjenkins  102u  IPv4 0xe3cb4a4bbbcd60e7      0t0    TCP 10.150.51.180:60994->65.55.174.170:imaps (CLOSED)
+Mail       283  curtisjenkins  103u  IPv4 0xe3cb4a4bbbcd60e7      0t0    TCP 10.150.51.180:60994->65.55.174.170:imaps (CLOSED)
+Mail       283  curtisjenkins  125u  IPv4 0xe3cb4a4ba1e389ef      0t0    TCP 10.150.51.180:49468->yk-in-f108.1e100.net:imaps (ESTABLISHED)
+Mail       283  curtisjenkins  126u  IPv4 0xe3cb4a4ba1e389ef      0t0    TCP 10.150.51.180:49468->yk-in-f108.1e100.net:imaps (ESTABLISHED)
+CalendarA  287  curtisjenkins   12u  IPv4 0xe3cb4a4bbbbd47df      0t0    TCP 10.150.51.180:51041->atl14s39-in-f1.1e100.net:https (ESTABLISHED)
+CalendarA  287  curtisjenkins   13u  IPv4 0xe3cb4a4bbbbd47df      0t0    TCP 10.150.51.180:51041->atl14s39-in-f1.1e100.net:https (ESTABLISHED)
+SystemUIS  298  curtisjenkins    9u  IPv4 0xe3cb4a4b9973236f      0t0    UDP *:*
+SystemUIS  298  curtisjenkins   10u  IPv4 0xe3cb4a4b99733447      0t0    UDP *:*
+SystemUIS  298  curtisjenkins   13u  IPv4 0xe3cb4a4b997336af      0t0    UDP *:58360
+SystemUIS  298  curtisjenkins   15u  IPv4 0xe3cb4a4b99732107      0t0    UDP *:*
+sharingd   304  curtisjenkins   15u  IPv4 0xe3cb4a4b9a9a74ff      0t0    UDP *:*
+sharingd   304  curtisjenkins   19u  IPv4 0xe3cb4a4b9a9a7297      0t0    UDP *:*
+WiFiAgent  469  curtisjenkins    7u  IPv4 0xe3cb4a4b9a9a9447      0t0    UDP *:*
+plugin_ho  725  curtisjenkins   15u  IPv4 0xe3cb4a4ba2c262f7      0t0    TCP 10.150.51.180:51454->209-20-75-76.slicehost.net:https (CLOSE_WAIT)
+plugin_ho  725  curtisjenkins   18u  IPv4 0xe3cb4a4ba2c262f7      0t0    TCP 10.150.51.180:51454->209-20-75-76.slicehost.net:https (CLOSE_WAIT)
+Notes      754  curtisjenkins   14u  IPv4 0xe3cb4a4ba2a647df      0t0    TCP 10.150.51.180:53414->yv-in-f109.1e100.net:imaps (ESTABLISHED)
+Notes      754  curtisjenkins   15u  IPv4 0xe3cb4a4ba2d63bff      0t0    TCP 10.150.51.180:53406->imap-po.sys.comcast.net:imap (ESTABLISHED)
+Notes      754  curtisjenkins   16u  IPv4 0xe3cb4a4ba294e0e7      0t0    TCP 10.150.51.180:53425->imap-po.sys.comcast.net:imap (ESTABLISHED)
+Notes      754  curtisjenkins   17u  IPv4 0xe3cb4a4ba294e0e7      0t0    TCP 10.150.51.180:53425->imap-po.sys.comcast.net:imap (ESTABLISHED)
+Notes      754  curtisjenkins   18u  IPv4 0xe3cb4a4bbbbdabff      0t0    TCP 10.150.51.180:51044->207.46.10.10:imaps (ESTABLISHED)
+Notes      754  curtisjenkins   19u  IPv4 0xe3cb4a4bbbbdabff      0t0    TCP 10.150.51.180:51044->207.46.10.10:imaps (ESTABLISHED)
+Notes      754  curtisjenkins   25u  IPv4 0xe3cb4a4ba2a647df      0t0    TCP 10.150.51.180:53414->yv-in-f109.1e100.net:imaps (ESTABLISHED)
+Notes      754  curtisjenkins   36u  IPv4 0xe3cb4a4ba2d63bff      0t0    TCP 10.150.51.180:53406->imap-po.sys.comcast.net:imap (ESTABLISHED)
+node      1112  curtisjenkins   11u  IPv6 0xe3cb4a4b9c72a9ff      0t0    TCP *:xprint-server (LISTEN)
