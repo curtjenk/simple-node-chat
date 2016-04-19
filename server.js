@@ -1,4 +1,4 @@
-const PORT = 8100;
+const PORT = process.env.PORT || 8100;
 const contentTypeHtml = { 'content-type': 'text/html' };
 const contentTypeIcon = { 'content-type': 'image/x-icon' };
 const contentTypePng = { 'content-type': 'image/png' }; //use response.end(img, 'binary');
