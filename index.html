@@ -5,7 +5,10 @@
     <title>Simple Chat</title>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script type="text/javascript">
-    var socketio = io.connect('10.150.51.180:' + port);
+
+    
+    // var socketio = io.connect('10.150.51.180:' + port);
+      var socketio = io.connect('https://fast-everglades-65718.herokuapp.com:' + port);
     // console.log(socketio);
 
     /// get/receive the message from the server
