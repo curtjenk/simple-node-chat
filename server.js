@@ -50,6 +50,7 @@ function requestHandler(req, resp) {
         // resp.statusCode = 200;
         // resp.setHeader(contentTypeHtml);
         resp.writeHead(200, contentTypeHtml);
+        // resp.write('<script>port='+PORT+'</script');
         resp.write(data);
         resp.end();
     });
