@@ -25,7 +25,8 @@
             } else if (!(myName === data.name.toUpperCase())) {
                 whoClass = 'them';
             }
-            document.getElementById('chat-window').innerHTML += '<div class="im ' + whoClass + '">' + data.date + ' -> ' + data.name + ' -> ' + data.message + '</div>';
+            var msgDate = new Date(data.date);
+            document.getElementById('chat-window').innerHTML += '<div class="im ' + whoClass + '">' + msgDate.toLocaleString() + ' -> ' + data.name + ' -> ' + data.message + '</div>';
         }
 
         
