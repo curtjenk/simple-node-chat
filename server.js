@@ -30,7 +30,7 @@ io.sockets.on('connect', function(socket) {
       if (i===0) {
         socket.emit('message_to_client', 'history-header');
       }
-      socket.emit('message_to_client', { history: true, message: MessageArr[i].message, name: MessageArr[i].name, date: MessageArr[i].date.toLocaleString() });
+      socket.emit('message_to_client', { history: true, message: MessageArr[i].message, name: MessageArr[i].name, date: MessageArr[i].date.toLocaleDateString() });
     }
     if (i>0) {
         socket.emit('message_to_client', 'history-trailer');
