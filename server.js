@@ -30,7 +30,7 @@ io.sockets.on('connect', function(socket) {
       if (i===0) {
         socket.emit('message_to_client', 'history-header');
       }
-      socket.emit('message_to_client', { history: true, message: MessageArr[i].message, name: MessageArr[i].name, date: MessageArr[i].date.toLocaleDateString() });
+      socket.emit('message_to_client', { history: true, message: MessageArr[i].message, name: MessageArr[i].name, date: MessageArr[i].date.toLocaleString() });
     }
     if (i>0) {
         socket.emit('message_to_client', 'history-trailer');
@@ -48,7 +48,7 @@ io.sockets.on('connect', function(socket) {
         console.log(data);
 
         //when a message is received, emit to all the clients
-        io.sockets.emit('message_to_client', { message: data.message, name: data.name, date: msg.date.toLocaleDateString() });
+        io.sockets.emit('message_to_client', { message: data.message, name: data.name, date: msg.date.toLocaleString() });
     })
 })
 
