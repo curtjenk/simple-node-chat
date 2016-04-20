@@ -25,9 +25,16 @@ var io = require('socket.io').listen(server);
 io.sockets.on('connect', function(socket) {
     console.log('someone connected to the server!!');
     console.log(MessageArr);
-    for (var i=0; i<MessageArr.length; i++) {
-      socket.emit('message_to_client', { message: MessageArr[i].message, name: MessageArr[i].name, date: MessageArr[i].date.toLocaleString() });
+    var i;
+    for (i=0; i<MessageArr.length; i++) {
+      if (i===0) {
+        socket.emit('message_to_client', 'history-header');
+      }
+      socket.emit('message_to_client', { history: true, message: MessageArr[i].message, name: MessageArr[i].name, date: MessageArr[i].date.toLocaleString() });
     }
+    if (i>0) {
+        socket.emit('message_to_client', 'history-trailer');
+      }
 
     //next line adds the below listener to each socket that connected!    
     socket.on('message_to_server', function(data) {

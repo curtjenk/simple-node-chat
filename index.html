@@ -6,14 +6,29 @@
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script type="text/javascript">
     // var socketio = io.connect('10.150.51.180:' + port);
-     //var socketio = io.connect('192.168.0.107:' + port);
+    //var socketio = io.connect('192.168.0.107:' + port);
     var socketio = io.connect('https://fast-everglades-65718.herokuapp.com') // + port);
-        // console.log(socketio);
+    // console.log(socketio);
 
     /// get/receive the message from the server
     socketio.on('message_to_client', function(data) {
         console.log(data);
-        document.getElementById('chat-window').innerHTML += '<div class="im">' + data.date + ' -> ' + data.name + ' -> ' + data.message + '</div>';
+        var myName = document.getElementById('name').value.toUpperCase();
+        var whoClass = 'me';
+        if (data === 'history-header') {
+            document.getElementById('chat-window').innerHTML += '<div class="im">------ Messages you missed ------</div>';
+        } else if (data === 'history-trailer') {
+            document.getElementById('chat-window').innerHTML += '<div class="im">----------------------------------------</div>';
+        } else {
+            if (data.history) {
+                whoClass = 'history';
+            } else if (!(myName === data.name.toUpperCase())) {
+                whoClass = 'them';
+            }
+            document.getElementById('chat-window').innerHTML += '<div class="im ' + whoClass + '">' + data.date + ' -> ' + data.name + ' -> ' + data.message + '</div>';
+        }
+
+        
     });
 
     ///send message to the server
@@ -32,31 +47,68 @@
         document.getElementById('message').value = '';
     }
     </script>
-    <!-- <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <style type="text/css">
+    body {
+        width: 80%;
+        margin: auto;
+    }
+    
+    .im {
+        font-size: 12px;
+    }
+    
+    .me {
+        color: red;
+    }
+    
+    .them {
+        color: green;
+    }
+    
+    .history {
+        font: italic bold 10px;
+        color: blue;
+    }
+    
+    #form-wrapper {
+        margin-top: 5px;
+        float: left;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    #window-wrapper {
+        float: left;
+        overflow: auto;
+        height: 70%;
+        margin-left: 10px;
+        max-width: 400px;
+        /*border: 1px solid;*/
+    }
+    
+    #name {
+        margin-bottom: 5px;
+    }
+    
+    #message {
+        width: 300px;
+    }
+    </style>
 </head>
 
 <body>
-    <div style="width: 75%; margin: auto;">
-        <h1 style="text-align: center;">Chatter Box!</h1>
-        <div style="float: left;">
-            <div>
-                <input type="text" id="name" placeholder="Your Name">
-            </div>
-            <div style="margin-top: 5px;">
-                <form onsubmit="sendMessage()">
-                    <input style="width: 300px;" type="text" id="message" placeholder="Type your message here">
-                </form>
-            </div>
-        </div>
-        <div style="float: left; overflow: auto; height: 70%; margin-left: 10px; width: 310px;">
-            <div id="chat-window">
-            </div>
-        </div>
+    <h1>Chatter Box!</h1>
+    <div id="form-wrapper">
+        <input type="text" id="name" placeholder="Your Name">
+        <form onsubmit="sendMessage()">
+            <input id="message" type="text" placeholder="Type your message here">
+        </form>
     </div>
-    <!-- <script type="text/javascript" src="app.module.js"></script>
-    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
-    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <div id="window-wrapper">
+        <div id="chat-window"></div>
+    </div>
 </body>
 
 </html>
