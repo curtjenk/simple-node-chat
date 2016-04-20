@@ -5,16 +5,15 @@
     <title>Simple Chat</title>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script type="text/javascript">
-
-    
     // var socketio = io.connect('10.150.51.180:' + port);
-      var socketio = io.connect('https://fast-everglades-65718.herokuapp.com') // + port);
-    // console.log(socketio);
+     //var socketio = io.connect('192.168.0.107:' + port);
+    var socketio = io.connect('https://fast-everglades-65718.herokuapp.com') // + port);
+        // console.log(socketio);
 
     /// get/receive the message from the server
     socketio.on('message_to_client', function(data) {
         console.log(data);
-        document.getElementById('chat-window').innerHTML += '<div class="im">' + data.message + '</div>';
+        document.getElementById('chat-window').innerHTML += '<div class="im">' + data.date + ' -> ' + data.name + ' -> ' + data.message + '</div>';
     });
 
     ///send message to the server
@@ -37,12 +36,22 @@
 </head>
 
 <body>
-    <h1>Chat Program</h1>
-    <input type="text" id="name" placeholder="Your Name">
-    <form onsubmit="sendMessage()">
-        <input type="text" id="message" placeholder="Type your message here">
-    </form>
-    <div id="chat-window">
+    <div style="width: 75%; margin: auto;">
+        <h1 style="text-align: center;">Chatter Box!</h1>
+        <div style="float: left;">
+            <div>
+                <input type="text" id="name" placeholder="Your Name">
+            </div>
+            <div style="margin-top: 5px;">
+                <form onsubmit="sendMessage()">
+                    <input style="width: 300px;" type="text" id="message" placeholder="Type your message here">
+                </form>
+            </div>
+        </div>
+        <div style="float: left; overflow: auto; height: 70%; margin-left: 10px; width: 310px;">
+            <div id="chat-window">
+            </div>
+        </div>
     </div>
     <!-- <script type="text/javascript" src="app.module.js"></script>
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>

@@ -9,7 +9,7 @@ var fs = require('fs');
 var MessageArr = [];
 function Message (name, text, date) {
   this.name = name;
-  this.text = text;
+  this.message = text;
   this.date = date;
 }
 
@@ -25,12 +25,15 @@ var io = require('socket.io').listen(server);
 io.sockets.on('connect', function(socket) {
     console.log('someone connected to the server!!');
     console.log(MessageArr);
+    for (var i=0; i<MessageArr.length; i++) {
+      socket.emit('message_to_client', { message: MessageArr[i].message, name: MessageArr[i].name, date: MessageArr[i].date.toLocaleString() });
+    }
 
     //next line adds the below listener to each socket that connected!    
     socket.on('message_to_server', function(data) {
        var msg = new Message();
        msg.name = data.name;
-       msg.text = data.message;
+       msg.message = data.message;
        msg.date = new Date();
        MessageArr.push(msg);
 
@@ -38,7 +41,7 @@ io.sockets.on('connect', function(socket) {
         console.log(data);
 
         //when a message is received, emit to all the clients
-        io.sockets.emit('message_to_client', { message: data.message })
+        io.sockets.emit('message_to_client', { message: data.message, name: data.name, date: msg.date.toLocaleString() });
     })
 })
 
