@@ -48,7 +48,7 @@ io.sockets.on('connect', function(socket) {
         console.log(data);
 
         //when a message is received, emit to all the clients
-        io.sockets.emit('message_to_client', { message: data.message, name: data.name, date: msg.date.toLocaleString() });
+        io.sockets.emit('message_to_client', { message: data.message, name: data.name, date: msg.date.toLocaleDateString() });
     })
 })
 
